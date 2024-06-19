@@ -110,6 +110,7 @@ def ensure_traefik_binary(prefix):
     )
 
     logger.info(f"Downloading traefik {traefik_version} from {traefik_url}...")
+    logger.info(f"use /home/sxy24618/softwares/traefik_v2.10.1_linux_amd64.tar.gz")
     # download the file
     #response = requests.get(traefik_url)
     #response.raise_for_status()
