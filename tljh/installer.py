@@ -199,10 +199,10 @@ def ensure_user_environment(user_requirements_txt_file):
 
         logger.info("Downloading & setting up user environment...")
         installer_url, installer_sha256 = _mambaforge_url()
-        with conda.download_miniconda_installer(
-            installer_url, installer_sha256
-        ) as installer_path:
-            conda.install_miniconda(installer_path, USER_ENV_PREFIX)
+        #with conda.download_miniconda_installer(
+        #    installer_url, installer_sha256
+        #) as installer_path:
+        #    conda.install_miniconda(installer_path, USER_ENV_PREFIX)
         package_versions = conda.get_conda_package_versions(USER_ENV_PREFIX)
 
         # quick sanity check: we should have conda and mamba!
