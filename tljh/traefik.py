@@ -121,7 +121,7 @@ def ensure_traefik_binary(prefix):
     #if checksum != checksums[plat]:
     #    raise OSError(f"Checksum failed {traefik_url}: {checksum} != {checksums[plat]}")
 
-    with tarfile.open(fileobj='/home/sxy24618/softwares/traefik_v2.10.1_linux_amd64.tar.gz') as tf:
+    with tarfile.open(fileobj='/home/sxy24618/softwares/traefik_v2.10.1_linux_amd64.tar.gz', "r:gz") as tf:
         tf.extract("traefik", path=traefik_bin_dir)
     os.chmod(traefik_bin, 0o755)
 
