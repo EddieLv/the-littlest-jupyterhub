@@ -109,7 +109,7 @@ def ensure_traefik_binary(prefix):
         f"/download/v{traefik_version}/traefik_v{traefik_version}_{plat}.tar.gz"
     )
 
-    #logger.info(f"use traefik {traefik_version} from {traefik_url}...")
+    logger.info(f"use traefik {traefik_version} from {traefik_url}...")
     # download the file
     #response = requests.get(traefik_url)
     #response.raise_for_status()
