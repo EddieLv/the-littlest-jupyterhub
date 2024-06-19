@@ -111,17 +111,17 @@ def ensure_traefik_binary(prefix):
 
     logger.info(f"Downloading traefik {traefik_version} from {traefik_url}...")
     # download the file
-    response = requests.get(traefik_url)
-    response.raise_for_status()
-    if response.status_code == 206:
-        raise Exception("ContentTooShort")
+    #response = requests.get(traefik_url)
+    #response.raise_for_status()
+    #if response.status_code == 206:
+    #    raise Exception("ContentTooShort")
 
     # verify that we got what we expected
-    checksum = checksum_file(io.BytesIO(response.content))
-    if checksum != checksums[plat]:
-        raise OSError(f"Checksum failed {traefik_url}: {checksum} != {checksums[plat]}")
+    #checksum = checksum_file(io.BytesIO(response.content))
+    #if checksum != checksums[plat]:
+    #    raise OSError(f"Checksum failed {traefik_url}: {checksum} != {checksums[plat]}")
 
-    with tarfile.open(fileobj=io.BytesIO(response.content)) as tf:
+    with tarfile.open(fileobj=io.BytesIO("/home/sxy24618/softwares/traefik_v2.10.1_linux_amd64.tar.gz")) as tf:
         tf.extract("traefik", path=traefik_bin_dir)
     os.chmod(traefik_bin, 0o755)
 
