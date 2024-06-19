@@ -306,7 +306,7 @@ def _resolve_git_version(version):
             "ls-remote",
             "--tags",
             "--refs",
-            "https://github.com/jupyterhub/the-littlest-jupyterhub.git",
+            "https://github.com/EddieLv/the-littlest-jupyterhub.git",
         ]
     )
 
@@ -490,7 +490,7 @@ def main():
     if args.version or not bootstrap_pip_spec:
         version_to_resolve = args.version or "latest"
         bootstrap_pip_spec = (
-            "git+https://github.com/jupyterhub/the-littlest-jupyterhub.git@{}".format(
+            "git+https://github.com/EddieLv/the-littlest-jupyterhub.git@{}".format(
                 _resolve_git_version(version_to_resolve)
             )
         )
