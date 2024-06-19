@@ -202,7 +202,7 @@ def ensure_user_environment(user_requirements_txt_file):
         #with conda.download_miniconda_installer(
         #    installer_url, installer_sha256
         #) as installer_path:
-        #    conda.install_miniconda(installer_path, USER_ENV_PREFIX)
+        conda.install_miniconda("/home/sxy24618/softwares/Mambaforge-23.1.0-1-Linux-x86_64.sh", USER_ENV_PREFIX)
         package_versions = conda.get_conda_package_versions(USER_ENV_PREFIX)
 
         # quick sanity check: we should have conda and mamba!
