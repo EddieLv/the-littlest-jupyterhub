@@ -477,7 +477,7 @@ def main():
         run_subprocess(["python3", "-m", "venv", hub_env_prefix])
 
     logger.info("Upgrading pip...")
-    run_subprocess([hub_env_pip, "install", "--upgrade", "pip"])
+    run_subprocess([hub_env_pip, "install", "--upgrade", "pip", "-i", "https://pypi.tuna.tsinghua.edu.cn/simple"])
 
     # pip install TLJH installer based on
     #
